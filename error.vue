@@ -16,7 +16,10 @@ const props = defineProps({
 })
 
 const { $hello } = useNuxtApp()
+if (process.server) {
 console.log('calling from error page, should have $hello object', $hello)
+}
+
 // try {
 //   await doSomething()
 // } catch (err){}
